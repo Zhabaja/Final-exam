@@ -1,0 +1,35 @@
+***CREATING DIRECTORY TREE***
+md weather-station\budapest
+cd weather-station
+md prague
+cd budapest
+md .git
+md january
+md february
+cd january
+nano week01.csv
+cd ..\february
+nano week01.csv
+cd ..
+cd ..\prague
+md .git
+md january
+md february
+cd january
+nano week01.csv
+cd ..\february
+nano week01.csv
+***end of creation of directory tree***
+
+cd ..
+cd ..
+cd ..
+git add weather-station\budapest\january\week01.csv
+cd weather-station
+git restore --staged budapest\january\week01.csv
+move budapest\january\week01.csv prague\january
+grep "-" budapest\february\week01.csv > budapest\freezing_days.csv
+ren prague\february\week01.csv week02.csv
+nano prague\february\week02.csv
+git add .
+git commit -m "Finished the last task of the exam"
